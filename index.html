@@ -72,6 +72,8 @@
       padding: 16px 20px;
       position: sticky;
       top: 72px;
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
     }
     .col-news {
       flex: 1;
@@ -102,7 +104,7 @@
       font-size: 0.75rem;
       color: #aaa;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       .layout {
         flex-direction: column;
         margin: 12px auto;
@@ -111,7 +113,11 @@
       .col-bloomberg {
         width: 100%;
         position: static;
+        max-height: none;
+        overflow-y: visible;
+        order: 2;
       }
+      .col-news { order: 1; }
       header { padding: 14px 16px; }
       header h1 { font-size: 1rem; }
       .news-item { padding: 10px 14px; gap: 10px; }
@@ -138,10 +144,50 @@
         </div>
       </div>
       <div class="news-item">
+        <div class="time">04/11 02:05</div>
+        <div class="content">
+          <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPRWpMVVM4QmkzNEtEVm9kbk85SXRidXZQdFF5U3ZkMVZqenh6bE9aTXk0WDJTSjRpMWxnSEItMlc3d3NPcnd0U1U4UGpWLXhXamk2SDFEelhLNFhYdEpSbGk4QUFEdzlOUmtpczlPcUl2ZllMem9INVhuQnVfX0RNWURmTmlJcEFXM0xqVldB?oc=5" target="_blank" rel="noopener">
+            【欧州市況】株上昇、ウク���イナでの和平合意進展を好感－国債は下落 (Bloomberg) - Yahoo!ニュース
+          </a>
+        </div>
+      </div>
+      <div class="news-item">
         <div class="time">04/11 00:39</div>
         <div class="content">
           <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1HUU9jekZSajUycjJmOUxEUEZ3Q1IzZmNaQXd0aFE4WkRocjNzcWZRdkFqVVJjNWl4UDNQWEFNSmR1VUk1b1JsWjNIVjMxaFVaYmdTT2VkSmhYVHNreGJOWjVJMWtGdWY0OFBxamM5bzFwNVB3eTJJ?oc=5" target="_blank" rel="noopener">
             【米国市況】S&amp;P500が小反落、和平協議を警戒－CPI受け序盤は堅調 - Bloomberg.com
+          </a>
+        </div>
+      </div>
+      <div class="news-item">
+        <div class="time">04/10 10:18</div>
+        <div class="content">
+          <a href="https://news.google.com/rss/articles/CBMiswNBVV95cUxNdmdrT0lIdGpVWFBsaVZXcDhvMUtCZml4SWhQN3dkYWFsZzlUQ0N1ckNpRlVQYVgxN0FfbkV5c2l0bHlVcThVWkJmMDRZT2I3bU9sYmtVNmM1TXNwTmpDUl9IdlQ4dXM1eW9mZE5ZeU1QdFZZOWRJZWZLSUgxQWZtODBQQUtmOFBIVm1NM052ckNVQjJMNlkyLW5IZjBjR1hvdVZucXVIR0pSa0owUkZkM1U0NW16Y2kxUl9UY0dLTG5oT09oT2RWd3NXSXN5NEJlNHNUWHk5ZzhjLUtVLXNydlVfSHdHVkdJUlc4VU45OGtiM0c1SkhXUW9rdlFCTzdsMjFmdHR2Q1lrcEE2ZTNQanozV19GV0FrVFRVMV9PY1JfaVNLbmxWX0JQdi1PLWRtNVJ2OWV6RlpyZUdweFNnUnpZQy1iSi1qMXMyUWtzeU5pX3NiX1JfOVRkQnB2U1M4MmRBMnFHQzU5NFc2RFVnZERLUWN1TGVKNWt0bWQ0eTVGOENzUzVyOHZ5S2lid1ByOVdEcFlrV18tbzNGeVRyeXh6UjZOWkR5V1pLN3o5WVozb0E?oc=5" target="_blank" rel="noopener">
+            【日本市況】株式は反発、停戦維持期待でリスク選好－ 債券先物は下落 - MSN
+          </a>
+        </div>
+      </div>
+      <div class="news-item">
+        <div class="time">04/10 09:24</div>
+        <div class="content">
+          <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1FNVdmMlhwTzBxRi14MXFGYmkxMHl5LVk5NGpyS185d0hPcExIZ3otN1dEVU5OV3RtZkw2UlN3WWFJY2FBWXA0Q2lsS1FNdEFLbGp0OFhYMHhhQ0tES3paa0tmelVnVXVFWjJJOVhvSmpyRkVadXVr?oc=5" target="_blank" rel="noopener">
+            【日本市況】株式は反発、停戦維持期待でリスク選好－債券先物は下落 - Bloomberg.com
+          </a>
+        </div>
+      </div>
+      <div class="news-item">
+        <div class="time">04/10 02:32</div>
+        <div class="content">
+          <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFA4SWRodGFlVWd6TE5hSEJqSDBIMTg1ZVE4dDgtZkNfUlRnMXdmMVN1bzVSYUNkZGFRRWFjdnRSQWJDdGktakd6N3E5YVR0Mld4M3QyUERpSDNubEEtb3VNQlZFd0VSZGh2bEl1SUFHMkFGaEVvT2JF?oc=5" target="_blank" rel="noopener">
+            【欧州市況】株は小幅安、国債は反落－中東での停戦合意めぐり懸念 - Bloomberg.com
+          </a>
+        </div>
+      </div>
+      <div class="news-item">
+        <div class="time">04/09 23:22</div>
+        <div class="content">
+          <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5kZWhqQ2w0d05fZm0zSmV5WlA4VExTYzVzX1Etc0lwZG1FalBCeldNN3FnQWpHZGQzbVdQakw5UFhkQXkwcExnUmowVFZ0SnJqenluLWttN3VYakNoVk5vcE9pQzZiOU1IbzRFU1loZVVFVzAzNV9N?oc=5" target="_blank" rel="noopener">
+            米国株が小幅安で始まる､停戦に懐疑的な見方－円は159円ちょうど近辺 - Bloomberg.com
           </a>
         </div>
       </div>
@@ -360,7 +406,7 @@
       <div class="time">04/11 03:38</div>
       <div class="content">
         <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOM0NyRU45eV9nOTBGTWxvcnN1Qm1PWTg0Rkh2dFVubTdMbi1QUDhJWDNhM1pvSGwzU05GRVVvX05LNk9vcm5DWkI5U1FPY2czV0lSaU54Z2Q2YkZPN1dTOHZqZjBXbjBIMmFfeF9yZmZmR1NIdnFVbGlTUUZKVDZXMU9SN296bUE?oc=5" target="_blank" rel="noopener">
-          週間為替展望（豪ドル／ZAR）-豪ドル、イラン情��・雇用統計が焦点(トレーダーズ・ウェブ) - Yahoo!ファイナンス
+          週間為替展望（豪ドル／ZAR）-豪ドル、イラン情勢・雇用統計が焦点(トレーダーズ・ウェブ) - Yahoo!ファイナンス
         </a>
       </div>
     </div>
@@ -472,7 +518,7 @@
       <div class="time">04/10 19:16</div>
       <div class="content">
         <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE1nRUo0azBoTXVXaldhRFluY3FiaXMtWVdMU245bjRzTGk5ZHh1YW9XQzQ3QTVxeUVYYUlabS1xNXM5R2FTcVp1Yg?oc=5" target="_blank" rel="noopener">
-          米国務省、イスラエル��レバノンの協議を来週主催へ - みんかぶ FX/為替
+          米国務省、イスラエルとレバノンの協議を来週主催へ - みんかぶ FX/為替
         </a>
       </div>
     </div>
@@ -488,7 +534,7 @@
       <div class="time">04/10 18:25</div>
       <div class="content">
         <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTFBjQ1hNZGViN2xOS2Q3SlVnRHBHX0kyLW1BMWRfRk1DdHAySEp3RnNSLTItQ2FtSUVxUXllUUxxcVNwaldCd0pRNg?oc=5" target="_blank" rel="noopener">
-          ユーロ買い、「ウクライナ大統領側近、プーチン氏と合意に近づいているとみている」＝ロンド��為替 - - みんかぶ FX/為替
+          ユーロ買い、「ウクライナ大統領側近、プーチン氏と合意に近づいているとみている」＝ロンドン為替 - - みんかぶ FX/為替
         </a>
       </div>
     </div>
